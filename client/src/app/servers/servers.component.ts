@@ -25,6 +25,9 @@ export class ServersComponent implements OnInit {
   onCreateServer() {
     this.serverCreationStatus = true;
     this.activeServers.push(this.serverName);
+    setTimeout(() => {
+      this.serverCreationStatus = false;
+    }, 2000)
   }
 
   onUpdateServerName(event: Event) {
@@ -34,8 +37,8 @@ export class ServersComponent implements OnInit {
   onDeleteServerName(event: Event) {
     console.log(event)
     for(let i = 0; i < this.activeServers.length; i++){
-      if(event.target.innerText === this.activeServers[i]){
-        console.log(event.target.innerHTML);
+      if((<HTMLInputElement>event.target).innerText === this.activeServers[i]){
+        console.log((<HTMLInputElement>event.target).innerHTML);
         console.log(this.activeServers[i]);
         this.activeServers.splice(i, 1);
         break;
