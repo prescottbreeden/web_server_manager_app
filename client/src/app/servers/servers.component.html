@@ -1,0 +1,44 @@
+<h3>Create New Server</h3>
+<label>Server Name: <span>{{ serverName }}</span></label>
+<!-- <input type="text" class="form-control" [(ngModel)]="serverName"> -->
+<div class="row">
+  <div class="col-xs-4">
+      
+    <input 
+      type="text" 
+      class="form-control" 
+      (input)="onUpdateServerName($event)"
+      placeholder="Enter a server name">
+    
+  </div>
+
+  <div class="col-xs-3">
+  
+    <button 
+    class="btn btn-primary" 
+    [disabled]="activeServers.length > 3" 
+    (click)="onCreateServer()">Add Server</button>
+  
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div *ngIf="serverCreationStatus">
+      <app-success-alert></app-success-alert>
+    </div>
+  </div>
+</div>
+<hr>
+<h3>Active Servers</h3>
+<div class="row">
+  <div class="col-xs-12">
+    <ol>
+      <li *ngFor="let server of activeServers"><span (click)="onDeleteServerName($event)">{{ server }}</span></li>
+    </ol>
+  </div>
+</div>
+<div *ngIf="serverDeletionStatus">
+    <app-warning-alert></app-warning-alert>
+  </div>
+<!-- <input type="text" class="form-control" [(ngModel)]="userName"> -->
+

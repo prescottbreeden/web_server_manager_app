@@ -1,0 +1,31 @@
+{
+  "name": "first_angular_project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "@angular/cli": "^6.0.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.0.18",
+    "mongoose-unique-validator": "^2.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prescottbreeden/angular_notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prescottbreeden/angular_notes/issues"
+  },
+  "homepage": "https://github.com/prescottbreeden/angular_notes#readme",
+  "description": ""
+}

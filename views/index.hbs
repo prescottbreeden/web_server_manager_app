@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
+
+{{#if condition}}
+    <p>Who is your daddy and what does he do?</p>>
+{{else}}
+    <p>Rubber baby buggy bumpers</p>
+{{/if}}
+
+{{#each anyArray}}
+    <p>{{ this }}</p>
+{{/each}}
+
+{{#each anyArray as |val key|}}
+    <p>{{ key }} : {{ val }}</p>
+{{/each}}

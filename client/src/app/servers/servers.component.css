@@ -1,0 +1,10 @@
+.center {
+    text-align: center;
+}
+li:hover {
+    color: red;
+    cursor: pointer;
+}
+/* .capitalize {
+    text-transform: capitalize;
+} */
